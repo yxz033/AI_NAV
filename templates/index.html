@@ -25,41 +25,75 @@
             <input type="text" class="search-input" placeholder="Search for AI tools...">
         </div>
 
+        <!-- 顶部广告位 -->
+        <div class="ad-container">
+            <div class="ad-banner" id="top-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+            </div>
+        </div>
+
         <div class="category-filters">
+            <div class="category-filter active" data-category="All">All</div>
             {% for category in categories %}
-            <div class="category-filter {% if category == 'All' %}active{% endif %}">{{category}}</div>
+            <div class="category-filter" data-category="{{category.name}}">{{category.name}}</div>
             {% endfor %}
         </div>
 
         <div class="row">
-            {% for tool in tools %}
+            {% for category in categories %}
+            {% for tool in category.tools %}
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/{{tool.name|lower|replace(' ', '-')}}.html'">
+                <div class="tool-card" data-category="{{category.name}}" onclick="window.location.href='output/tool/{{tool.name|lower|replace(' ', '-')}}.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             {{tool.name}}
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
+                            {% if tool.monthly_visitors %}
                             <div class="tool-stat">
                                 <i class="fa fa-eye"></i>
                                 <span>{{tool.monthly_visitors}}</span>
                             </div>
+                            {% endif %}
+                            {% if tool.rating %}
                             <div class="tool-stat">
                                 <i class="fa fa-star"></i>
                                 <span>{{tool.rating}}</span>
                             </div>
+                            {% endif %}
                         </div>
                         <p class="tool-description">{{tool.description}}</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">{{category.name}}</span>
+                            {% if tool.tags %}
                             {% for tag in tool.tags %}
                             <span class="tool-tag">{{tag}}</span>
                             {% endfor %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
+            {% if loop.index % 6 == 0 %}
+            <!-- 每6个工具卡片后的广告位 -->
+            <div class="col-12">
+                <div class="ad-container">
+                    <div class="ad-banner" id="content-ad-{{loop.index // 6}}">
+                        <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+                    </div>
+                </div>
+            </div>
+            {% endif %}
             {% endfor %}
+            {% endfor %}
+        </div>
+
+        <!-- 底部广告位 -->
+        <div class="ad-container mb-4">
+            <div class="ad-banner" id="bottom-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+            </div>
         </div>
     </div>
 
@@ -76,12 +110,11 @@
                 // 添加当前过滤器的active类
                 this.classList.add('active');
                 
-                const category = this.textContent;
+                const category = this.getAttribute('data-category');
                 const cards = document.querySelectorAll('.tool-card');
                 
                 cards.forEach(card => {
-                    const cardCategory = card.querySelector('.tool-tags').textContent;
-                    if (category === 'All' || cardCategory.includes(category)) {
+                    if (category === 'All' || card.getAttribute('data-category') === category) {
                         card.parentElement.style.display = '';
                     } else {
                         card.parentElement.style.display = 'none';

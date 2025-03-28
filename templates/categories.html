@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Categories - Your Gateway to AI Learning</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .category-section {
+            margin-bottom: 40px;
+        }
+        .category-section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .category-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-card-body {
+            padding: 20px;
+        }
+        .category-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .category-stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        .category-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .category-description {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .featured-tools {
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">AI Tools Categories</h1>
+        <p class="text-center mb-5">Find AI tools by categories. Over {{total_categories}} categories to explore.</p>
+
+        <!-- 顶部广告位 -->
+        <div class="ad-container">
+            <div class="ad-banner" id="category-top-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+            </div>
+        </div>
+
+        <!-- 主要分类 -->
+        {% for group in category_groups %}
+        <div class="category-section">
+            <h2 class="category-section-title">{{group.name}}</h2>
+            <div class="row">
+                {% for category in group.categories %}
+                <div class="col-md-4">
+                    <div class="category-card" onclick="window.location.href='category/{{category.name|lower|replace(' ', '-')}}.html'">
+                        <div class="category-card-body">
+                            <h3 class="category-name">{{category.name}}</h3>
+                            <div class="category-stats">
+                                <div class="category-stat">
+                                    <i class="fa fa-cube"></i>
+                                    <span>{{category.tools|length}} tools</span>
+                                </div>
+                                {% if category.total_monthly_visitors %}
+                                <div class="category-stat">
+                                    <i class="fa fa-eye"></i>
+                                    <span>{{category.total_monthly_visitors}}+ visits</span>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <p class="category-description">{{category.description}}</p>
+                            {% if category.tools %}
+                            <div class="featured-tools">
+                                Featured tools: 
+                                {% for tool in category.tools[:3] %}
+                                {{tool.name}}{% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% if loop.index % 6 == 0 %}
+                <!-- 每6个分类卡片后的广告位 -->
+                <div class="col-12">
+                    <div class="ad-container">
+                        <div class="ad-banner" id="category-content-ad-{{loop.index // 6}}">
+                            <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- 底部广告位 -->
+        <div class="ad-container mb-4">
+            <div class="ad-banner" id="category-bottom-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

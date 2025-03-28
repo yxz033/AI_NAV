@@ -145,6 +145,6 @@
 {% endblock %}
 
 {% block scripts %}
-<link rel="stylesheet" href="/assets/css/image-tool.css">
-<script src="/assets/js/image-gallery.js"></script>
+<link rel="stylesheet" href="{{ '/assets/css/image-tool.css'|fix_asset_path }}">
+<script src="{{ '/assets/js/image-gallery.js'|fix_asset_path }}"></script>
 {% endblock %} 

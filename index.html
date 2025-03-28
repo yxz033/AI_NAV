@@ -21,7 +21,7 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/categories">Categories</a>
+                    <a class="nav-link" href="/categories.html">Categories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
@@ -48,941 +48,580 @@
             <input type="text" class="search-input" placeholder="Search for AI tools...">
         </div>
 
+        <!-- 顶部广告位 -->
+        <div class="ad-container">
+            <div class="ad-banner" id="top-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
+            </div>
+        </div>
+
         <div class="category-filters">
+            <div class="category-filter active" data-category="All">All</div>
             
-            <div class="category-filter active">All</div>
+            <div class="category-filter" data-category="AI-Assisted Development & Code Generation">AI-Assisted Development & Code Generation</div>
             
-            <div class="category-filter ">AI-Assisted</div>
+            <div class="category-filter" data-category="Web Deployment & Hosting">Web Deployment & Hosting</div>
             
-            <div class="category-filter ">Web</div>
+            <div class="category-filter" data-category="Domain Registration & Management">Domain Registration & Management</div>
             
-            <div class="category-filter ">Domain</div>
+            <div class="category-filter" data-category="SEO & Traffic Analysis">SEO & Traffic Analysis</div>
             
-            <div class="category-filter ">SEO</div>
+            <div class="category-filter" data-category="Game Development & Resources">Game Development & Resources</div>
             
-            <div class="category-filter ">Game</div>
+            <div class="category-filter" data-category="AI Image Generation">AI Image Generation</div>
             
-            <div class="category-filter ">AI</div>
-            
-            <div class="category-filter ">Keyword</div>
-            
-            <div class="category-filter ">Monetization</div>
-            
-            <div class="category-filter ">Navigation</div>
-            
-            <div class="category-filter ">Web</div>
+            <div class="category-filter" data-category="Keyword Research & Market Analysis">Keyword Research & Market Analysis</div>
             
         </div>
 
         <div class="row">
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/claude.html'">
+                <div class="tool-card" data-category="AI-Assisted Development & Code Generation" onclick="window.location.href='output/tool/claude.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Claude
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>475.0K</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>44</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">A powerful AI assistant that can generate code, provide implementation guidance, and help debug issues</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">AI Assistant</span>
-                            
-                            <span class="tool-tag">Code Generation</span>
+                            <span class="tool-tag">AI-Assisted Development & Code Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/cursor.html'">
+                <div class="tool-card" data-category="AI-Assisted Development & Code Generation" onclick="window.location.href='output/tool/cursor.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Cursor
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI-powered code editor based on VS Code that helps write, edit, and understand code</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">AI Assistant</span>
-                            
-                            <span class="tool-tag">Code Generation</span>
+                            <span class="tool-tag">AI-Assisted Development & Code Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/windsurf.html'">
+                <div class="tool-card" data-category="AI-Assisted Development & Code Generation" onclick="window.location.href='output/tool/windsurf.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Windsurf
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI coding agent that helps develop applications through natural language instructions</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">AI Assistant</span>
-                            
-                            <span class="tool-tag">Code Generation</span>
+                            <span class="tool-tag">AI-Assisted Development & Code Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/github-copilot.html'">
+                <div class="tool-card" data-category="AI-Assisted Development & Code Generation" onclick="window.location.href='output/tool/github-copilot.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             GitHub Copilot
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI pair programmer that integrates with your code editor to suggest code as you type</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">AI Assistant</span>
-                            
-                            <span class="tool-tag">Code Generation</span>
+                            <span class="tool-tag">AI-Assisted Development & Code Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/cloudflare-pages.html'">
+                <div class="tool-card" data-category="Web Deployment & Hosting" onclick="window.location.href='output/tool/cloudflare-pages.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Cloudflare Pages
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">A JAMstack platform for frontend developers to deploy websites globally with continuous integration</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Web Deployment & Hosting</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/vercel.html'">
+                <div class="tool-card" data-category="Web Deployment & Hosting" onclick="window.location.href='output/tool/vercel.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Vercel
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Platform for frontend frameworks and static sites that provides serverless functions and global CDN</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Web Deployment & Hosting</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/github-pages.html'">
+                <div class="tool-card" data-category="Web Deployment & Hosting" onclick="window.location.href='output/tool/github-pages.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             GitHub Pages
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Hosting service that takes files straight from a GitHub repository</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Web Deployment & Hosting</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/spaceship.com.html'">
+                <div class="tool-card" data-category="Domain Registration & Management" onclick="window.location.href='output/tool/spaceship.com.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Spaceship.com
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Domain registrar mentioned in the training manual for purchasing domains</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Domain Registration & Management</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/cloudflare.html'">
+                <div class="tool-card" data-category="Domain Registration & Management" onclick="window.location.href='output/tool/cloudflare.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Cloudflare
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Provides DNS management, CDN, and security services for domains</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Domain Registration & Management</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/porkbun.html'">
+                <div class="tool-card" data-category="Domain Registration & Management" onclick="window.location.href='output/tool/porkbun.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Porkbun
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Domain registrar mentioned in the training manual</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Domain Registration & Management</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/namecheap.html'">
+                <div class="tool-card" data-category="Domain Registration & Management" onclick="window.location.href='output/tool/namecheap.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Namecheap
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Popular domain registrar mentioned in the training manual</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Domain Registration & Management</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/google-analytics.html'">
+                <div class="tool-card" data-category="SEO & Traffic Analysis" onclick="window.location.href='output/tool/google-analytics.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Google Analytics
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Comprehensive web analytics service offered by Google</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">SEO & Traffic Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/google-search-console.html'">
+                <div class="tool-card" data-category="SEO & Traffic Analysis" onclick="window.location.href='output/tool/google-search-console.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Google Search Console
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Tool for monitoring and optimizing a website's presence in Google Search results</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">SEO & Traffic Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/aitdk.html'">
+                <div class="tool-card" data-category="SEO & Traffic Analysis" onclick="window.location.href='output/tool/aitdk.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             AITDK
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Extension that provides SEO metrics and insights directly in search results</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">SEO & Traffic Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/ahrefs.html'">
+                <div class="tool-card" data-category="SEO & Traffic Analysis" onclick="window.location.href='output/tool/ahrefs.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Ahrefs
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Comprehensive SEO toolset for backlink analysis, keyword research, and competitor analysis</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">SEO & Traffic Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/html5-game-distribution.html'">
+                <div class="tool-card" data-category="Game Development & Resources" onclick="window.location.href='output/tool/html5-game-distribution.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             HTML5 Game Distribution
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Platform for finding and integrating HTML5 games into websites</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Game Development & Resources</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/crazygames.html'">
+                <div class="tool-card" data-category="Game Development & Resources" onclick="window.location.href='output/tool/crazygames.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             CrazyGames
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Platform for HTML5 games with embed options for developers</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Game Development & Resources</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/itch.io.html'">
+                <div class="tool-card" data-category="Game Development & Resources" onclick="window.location.href='output/tool/itch.io.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             itch.io
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Marketplace for independent digital creators with many free and open-source games</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Game Development & Resources</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/midjourney.html'">
+                <div class="tool-card" data-category="AI Image Generation" onclick="window.location.href='output/tool/midjourney.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Midjourney
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>328.5K</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>38</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI image generation tool known for artistic and high-quality outputs</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">Image Generation</span>
-                            
-                            <span class="tool-tag">Art</span>
+                            <span class="tool-tag">AI Image Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/dall-e.html'">
+                <div class="tool-card" data-category="AI Image Generation" onclick="window.location.href='output/tool/dall-e.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             DALL-E
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">OpenAI's image generation model that creates images from text descriptions</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">Image Generation</span>
-                            
-                            <span class="tool-tag">Art</span>
+                            <span class="tool-tag">AI Image Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/flux-shell.html'">
+                <div class="tool-card" data-category="AI Image Generation" onclick="window.location.href='output/tool/flux-shell.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Flux Shell
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI image generation platform mentioned in training manual</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">Image Generation</span>
-                            
-                            <span class="tool-tag">Art</span>
+                            <span class="tool-tag">AI Image Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/ideogram.html'">
+                <div class="tool-card" data-category="AI Image Generation" onclick="window.location.href='output/tool/ideogram.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Ideogram
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">AI image generation tool with strong capabilities for text rendering in images</p>
                         <div class="tool-tags">
-                            
-                            <span class="tool-tag">Image Generation</span>
-                            
-                            <span class="tool-tag">Art</span>
+                            <span class="tool-tag">AI Image Generation</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
+            
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/google-trends.html'">
+                <div class="tool-card" data-category="Keyword Research & Market Analysis" onclick="window.location.href='output/tool/google-trends.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Google Trends
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Tool for examining search trends and comparing search term popularity over time</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Keyword Research & Market Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/currentdomains.com.html'">
+                <div class="tool-card" data-category="Keyword Research & Market Analysis" onclick="window.location.href='output/tool/currentdomains.com.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             Currentdomains.com
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Tool for checking domain availability based on current trends</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Keyword Research & Market Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
+            
             <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/instantdomainsearch.com.html'">
+                <div class="tool-card" data-category="Keyword Research & Market Analysis" onclick="window.location.href='output/tool/instantdomainsearch.com.html'">
                     <div class="card-body">
                         <h5 class="tool-name">
                             InstantDomainSearch.com
                             <i class="fa fa-external-link"></i>
                         </h5>
                         <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
+                            
+                            
                         </div>
                         <p class="tool-description">Fast domain name search tool for checking availability in real-time</p>
                         <div class="tool-tags">
+                            <span class="tool-tag">Keyword Research & Market Analysis</span>
                             
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/google-adsense.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            Google AdSense
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Google's advertising program that allows website owners to earn money by displaying ads</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
             
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/ko-fi.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            ko-fi
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Platform for receiving tips and donations from website visitors</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
             
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/buy-me-a-coffee.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            Buy Me A Coffee
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Simple platform for creators to receive support from fans</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <!-- 底部广告位 -->
+        <div class="ad-container mb-4">
+            <div class="ad-banner" id="bottom-ad">
+                <img src="assets/images/ad-placeholder-728x90.svg" alt="广告位">
             </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/fre123-navigation-platform.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            FRE123 Navigation Platform
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Open-source platform for building navigation websites</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/webstackpage.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            WebStackPage
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Open-source, responsive resource navigation site template</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/oss-gallery.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            OSS Gallery
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Platform for showcasing open-source projects in a directory format</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/next.js-boilerplate.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            Next.js Boilerplate
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Starter template for Next.js with TypeScript, ESLint, and more</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/saas-boilerplate.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            SaaS Boilerplate
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Complete starter kit for building SaaS applications with Next.js</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/astro-boilerplate.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            Astro Boilerplate
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Template for building static sites with Astro framework</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-4">
-                <div class="tool-card" onclick="window.location.href='output/tool/landing-page-boilerplate.html'">
-                    <div class="card-body">
-                        <h5 class="tool-name">
-                            Landing Page Boilerplate
-                            <i class="fa fa-external-link"></i>
-                        </h5>
-                        <div class="tool-stats">
-                            <div class="tool-stat">
-                                <i class="fa fa-eye"></i>
-                                <span>New</span>
-                            </div>
-                            <div class="tool-stat">
-                                <i class="fa fa-star"></i>
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <p class="tool-description">Versatile template for marketing landing pages</p>
-                        <div class="tool-tags">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
 
@@ -1029,12 +668,11 @@
                 // 添加当前过滤器的active类
                 this.classList.add('active');
                 
-                const category = this.textContent;
+                const category = this.getAttribute('data-category');
                 const cards = document.querySelectorAll('.tool-card');
                 
                 cards.forEach(card => {
-                    const cardCategory = card.querySelector('.tool-tags').textContent;
-                    if (category === 'All' || cardCategory.includes(category)) {
+                    if (category === 'All' || card.getAttribute('data-category') === category) {
                         card.parentElement.style.display = '';
                     } else {
                         card.parentElement.style.display = 'none';
