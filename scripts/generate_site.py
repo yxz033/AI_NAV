@@ -17,6 +17,17 @@ class SiteGenerator:
         self.template_dir = os.path.join(self.project_root, 'templates')
         self.assets_dir = os.path.join(self.project_root, 'assets')
         
+        # Google Analytics代码
+        self.ga_code = '''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC7Q8SRCC1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QC7Q8SRCC1');
+</script>'''
+        
         # 确保输出目录存在
         os.makedirs(self.tool_output_dir, exist_ok=True)
         os.makedirs(self.category_output_dir, exist_ok=True)
@@ -141,6 +152,11 @@ class SiteGenerator:
             }
         }
 
+    def add_ga_code(self, html_content: str) -> str:
+        """在HTML内容中添加Google Analytics代码"""
+        # 在</head>标签前插入GA代码
+        return html_content.replace('</head>', f'{self.ga_code}\n</head>')
+
     def generate_tool_page(self, tool: dict, category_name: str):
         """生成工具详情页"""
         template_name = self.template_mapping.get(category_name, 'base.html')
@@ -151,6 +167,9 @@ class SiteGenerator:
         
         # 生成页面
         output = template.render(**tool_data)
+        
+        # 添加GA代码
+        output = self.add_ga_code(output)
         
         # 创建文件名
         filename = tool['name'].lower().replace(' ', '-')
@@ -181,6 +200,9 @@ class SiteGenerator:
         # 生成页面
         output = template.render(**category_data)
         
+        # 添加GA代码
+        output = self.add_ga_code(output)
+        
         # 创建文件名
         filename = category['name'].lower().replace(' ', '-')
         output_path = os.path.join(self.category_output_dir, f'{filename}.html')
@@ -200,6 +222,9 @@ class SiteGenerator:
         # 生成页面
         output = template.render(**categories_data)
         
+        # 添加GA代码
+        output = self.add_ga_code(output)
+        
         # 保存文件
         output_path = os.path.join(self.project_root, 'categories.html')
         with open(output_path, 'w', encoding='utf-8') as f:
@@ -210,6 +235,9 @@ class SiteGenerator:
         """生成首页"""
         template = self.env.get_template('index.html')
         output = template.render(categories=data['categories'])
+        
+        # 添加GA代码
+        output = self.add_ga_code(output)
         
         output_path = os.path.join(self.project_root, 'index.html')
         with open(output_path, 'w', encoding='utf-8') as f:
