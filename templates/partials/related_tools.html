@@ -1,0 +1,13 @@
+<div class="tool-section">
+    <h2 class="tool-section-title">Similar Tools</h2>
+    <div class="related-tools">
+        {% for related_tool in tool.related_tools %}
+        <div class="related-tool-card" onclick="window.location.href='/tool/{{related_tool.name|lower|replace(' ', '-')}}'">
+            <h5>{{related_tool.name}}</h5>
+            <p class="small text-muted">{{related_tool.description}}</p>
+        </div>
+        {% else %}
+        <p class="text-muted">No related tools found.</p>
+        {% endfor %}
+    </div>
+</div> 

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block category_specific_content %}
+<!-- 功能特性 -->
+<div class="tool-section">
+    <h2 class="tool-section-title">Features</h2>
+    <ul>
+        {% for feature in tool.features %}
+        <li>{{feature}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- 对比分析 -->
+{% if tool.comparison %}
+<div class="tool-section">
+    <h2 class="tool-section-title">Comparison</h2>
+    <p>{{tool.comparison}}</p>
+</div>
+{% endif %}
+
+<!-- 使用教程 -->
+<div class="tool-section">
+    <h2 class="tool-section-title">Tutorial</h2>
+    {% if tool.tutorial %}
+    <p>{{tool.tutorial}}</p>
+    {% endif %}
+    {% if tool.tutorial_steps %}
+    <ol>
+        {% for step in tool.tutorial_steps %}
+        <li>{{step}}</li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+</div>
+
+<!-- 代码示例 -->
+{% if tool.code_examples %}
+<div class="tool-section">
+    <h2 class="tool-section-title">Code Examples</h2>
+    {% for example in tool.code_examples %}
+    <div class="code-example">
+        <h3 class="example-title">{{example.title}}</h3>
+        <pre><code class="language-{{example.language}}">{{example.code}}</code></pre>
+        {% if example.explanation %}
+        <p class="example-explanation">{{example.explanation}}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block additional_info %}
+{% if tool.supported_languages %}
+<p><strong>Supported Languages:</strong> {{tool.supported_languages|join(', ')}}</p>
+{% endif %}
+{% if tool.integrations %}
+<p><strong>Integrations:</strong> {{tool.integrations|join(', ')}}</p>
+{% endif %}
+{% if tool.pricing %}
+<p><strong>Pricing:</strong> {{tool.pricing}}</p>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+{% endblock %} 

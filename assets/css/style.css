@@ -1,0 +1,315 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f8f9fa;
+    --card-hover-bg: #f0f2f5;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #666 !important;
+    font-weight: 500;
+    padding: 1rem 1.5rem !important;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    border-bottom-color: var(--secondary-color);
+}
+
+.time-nav {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 1rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.time-nav a {
+    display: block;
+    color: #666;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.time-nav a:hover {
+    color: var(--secondary-color);
+}
+
+.tool-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    height: 100%;
+    cursor: pointer;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    background: var(--card-hover-bg);
+}
+
+.tool-card .card-body {
+    padding: 1.25rem;
+}
+
+.tool-name {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tool-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.tool-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tool-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tool-tag {
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.search-box {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.category-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.category-filter {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-filter:hover,
+.category-filter.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* 工具详情页样式 */
+.tool-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.tool-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.tool-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tool-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.tool-meta-item i {
+    font-size: 1.2rem;
+}
+
+.tool-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.tool-action-btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tool-action-btn i {
+    font-size: 1.1rem;
+}
+
+.tool-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s;
+}
+
+.tool-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tool-section-title {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.tool-section p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.tool-info {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.tool-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.tool-info p:last-child {
+    margin-bottom: 0;
+}
+
+.tool-info strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 评论区样式 */
+.reviews {
+    padding: 1rem 0;
+}
+
+.review-form {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.review-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.rating-stars {
+    color: #ffc107;
+    font-size: 1.5rem;
+}
+
+.rating-stars i {
+    cursor: pointer;
+    margin-right: 0.25rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tool-header {
+        padding: 2rem 0;
+    }
+    
+    .tool-title {
+        font-size: 2rem;
+    }
+    
+    .tool-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tool-actions {
+        flex-direction: column;
+    }
+    
+    .tool-section {
+        padding: 1.5rem;
+    }
+} 

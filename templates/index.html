@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Navigation - Your Gateway to AI Learning</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    {% include 'partials/navbar.html' %}
+
+    <div class="time-nav">
+        <a href="#" class="active">NOW</a>
+        <a href="#">MAR</a>
+        <a href="#">FEB</a>
+        <a href="#">JAN</a>
+        <a href="#">2024</a>
+        <a href="#">2023</a>
+    </div>
+
+    <div class="container mt-4">
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search for AI tools...">
+        </div>
+
+        <div class="category-filters">
+            {% for category in categories %}
+            <div class="category-filter {% if category == 'All' %}active{% endif %}">{{category}}</div>
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            {% for tool in tools %}
+            <div class="col-md-4 mb-4">
+                <div class="tool-card" onclick="window.location.href='output/tool/{{tool.name|lower|replace(' ', '-')}}.html'">
+                    <div class="card-body">
+                        <h5 class="tool-name">
+                            {{tool.name}}
+                            <i class="fa fa-external-link"></i>
+                        </h5>
+                        <div class="tool-stats">
+                            <div class="tool-stat">
+                                <i class="fa fa-eye"></i>
+                                <span>{{tool.monthly_visitors}}</span>
+                            </div>
+                            <div class="tool-stat">
+                                <i class="fa fa-star"></i>
+                                <span>{{tool.rating}}</span>
+                            </div>
+                        </div>
+                        <p class="tool-description">{{tool.description}}</p>
+                        <div class="tool-tags">
+                            {% for tag in tool.tags %}
+                            <span class="tool-tag">{{tag}}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% include 'partials/footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 分类过滤功能
+        document.querySelectorAll('.category-filter').forEach(filter => {
+            filter.addEventListener('click', function() {
+                // 移除其他过滤器的active类
+                document.querySelectorAll('.category-filter').forEach(f => f.classList.remove('active'));
+                // 添加当前过滤器的active类
+                this.classList.add('active');
+                
+                const category = this.textContent;
+                const cards = document.querySelectorAll('.tool-card');
+                
+                cards.forEach(card => {
+                    const cardCategory = card.querySelector('.tool-tags').textContent;
+                    if (category === 'All' || cardCategory.includes(category)) {
+                        card.parentElement.style.display = '';
+                    } else {
+                        card.parentElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 搜索功能
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.tool-card');
+            
+            cards.forEach(card => {
+                const toolName = card.querySelector('.tool-name').textContent.toLowerCase();
+                const toolDesc = card.querySelector('.tool-description').textContent.toLowerCase();
+                const toolTags = card.querySelector('.tool-tags').textContent.toLowerCase();
+                
+                if (toolName.includes(searchTerm) || 
+                    toolDesc.includes(searchTerm) || 
+                    toolTags.includes(searchTerm)) {
+                    card.parentElement.style.display = '';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

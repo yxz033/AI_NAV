@@ -1,0 +1,257 @@
+/* 图片展示区域 */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.image-example {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+.image-example:hover {
+    transform: translateY(-5px);
+}
+
+.example-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.example-input, .example-output {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.example-input img, .example-output img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* 提示词指南 */
+.prompt-tips, .prompt-examples {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.prompt-examples code {
+    display: block;
+    background: #e9ecef;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* 风格设置 */
+.style-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.style-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.style-card:hover {
+    transform: translateY(-5px);
+}
+
+.style-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.style-card h4 {
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.style-card p {
+    padding: 1rem;
+    margin: 0;
+}
+
+.style-params {
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+.style-params h5 {
+    margin: 0 0 0.5rem 0;
+}
+
+.style-params ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .example-pair {
+        grid-template-columns: 1fr;
+    }
+    
+    .style-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 工具部分通用样式 */
+.tool-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tool-section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/* 图片加载动画 */
+.image-example img {
+    transition: opacity 0.3s;
+}
+
+.image-example img.loading {
+    opacity: 0.5;
+}
+
+/* 图片查看器 */
+.image-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-viewer.active {
+    display: flex;
+}
+
+.image-viewer img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.image-viewer .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* 教程部分样式 */
+.tutorial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tutorial-overview {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.tutorial-overview h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tutorial-steps {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.tutorial-steps h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.step-item:hover {
+    transform: translateX(5px);
+}
+
+.step-number {
+    background: #007bff;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+    line-height: 1.6;
+}
+
+/* 响应式设计补充 */
+@media (max-width: 768px) {
+    .step-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-bottom: 0.5rem;
+    }
+} 

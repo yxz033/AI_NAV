@@ -1,0 +1,379 @@
+{
+  "categories": [
+    {
+      "name": "AI-Assisted Development & Code Generation",
+      "description": "Tools that help write, optimize, or debug code for your web projects",
+      "tools": [
+        {
+          "name": "Claude",
+          "url": "https://claude.ai",
+          "description": "A powerful AI assistant that can generate code, provide implementation guidance, and help debug issues",
+          "evaluation": "Excels at understanding complex programming concepts and producing functional code with proper explanations. Particularly strong with HTML, CSS, JavaScript, and Python.",
+          "comparison": "Compared to ChatGPT, Claude often provides more detailed explanations and cleaner code, but may be slightly slower for real-time interactions.",
+          "tutorial": "To use Claude for coding: (1) Clearly describe what you want to build; (2) Specify language and frameworks; (3) Ask for comments in the code; (4) Request step-by-step explanations.",
+          "free_alternatives": "ChatGPT (basic version), GitHub Copilot (limited version available for students)"
+        },
+        {
+          "name": "Cursor",
+          "url": "https://cursor.sh",
+          "description": "AI-powered code editor based on VS Code that helps write, edit, and understand code",
+          "evaluation": "Excellent for working with existing codebases. The integration with AI allows for seamless code generation and explanation within your development environment.",
+          "comparison": "Unlike ChatGPT and Claude which are chat-based, Cursor directly integrates AI into your coding workflow. Smoother than GitHub Copilot for larger code generations.",
+          "tutorial": "After installation: (1) Press Ctrl+K to activate AI features; (2) Highlight code and press Ctrl+L to get explanations; (3) Use comments to describe what you want to generate.",
+          "free_alternatives": "VS Code with GitHub Copilot extension (limited free tier)"
+        },
+        {
+          "name": "Windsurf",
+          "url": "https://www.windsurf.io/",
+          "description": "AI coding agent that helps develop applications through natural language instructions",
+          "evaluation": "Particularly strong for beginners as it handles much of the technical complexity. Great for rapid prototyping and concept validation.",
+          "comparison": "More focused on application development than Cursor, with less emphasis on editing existing code. Better than ChatGPT for maintaining context across complex projects.",
+          "tutorial": "To build with Windsurf: (1) Describe your application in detail; (2) Let it generate the structure; (3) Review and refine through conversation; (4) Export the code when ready.",
+          "free_alternatives": "GitHub Codespaces with Copilot (limited free tier)"
+        },
+        {
+          "name": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "description": "AI pair programmer that integrates with your code editor to suggest code as you type",
+          "evaluation": "Excellent for boosting productivity with autocomplete-style suggestions. Works best when you have a clear direction for your code.",
+          "comparison": "More tightly integrated with coding workflow than Claude or ChatGPT, but less capable of creating entire applications from scratch compared to Windsurf.",
+          "tutorial": "After installation: (1) Start typing code or comments; (2) Copilot will suggest completions; (3) Accept suggestions with Tab; (4) Use // for more specific prompts.",
+          "free_alternatives": "Tabnine (limited free version)"
+        }
+      ]
+    },
+    {
+      "name": "Web Deployment & Hosting",
+      "description": "Platforms for deploying and hosting your web applications",
+      "tools": [
+        {
+          "name": "Cloudflare Pages",
+          "url": "https://pages.cloudflare.com/",
+          "description": "A JAMstack platform for frontend developers to deploy websites globally with continuous integration",
+          "evaluation": "Extremely fast global CDN with generous free tier (unlimited sites, 1M requests/day). Excellent for static and JAMstack sites.",
+          "comparison": "More generous free tier than Vercel or Netlify, but slightly fewer developer-focused features. Better performance globally compared to GitHub Pages.",
+          "tutorial": "To deploy: (1) Connect to GitHub repo; (2) Configure build settings; (3) Set environment variables if needed; (4) Deploy and connect custom domain.",
+          "free_alternatives": "GitHub Pages (more limited features)"
+        },
+        {
+          "name": "Vercel",
+          "url": "https://vercel.com/",
+          "description": "Platform for frontend frameworks and static sites that provides serverless functions and global CDN",
+          "evaluation": "One of the best platforms for Next.js deployments with excellent developer experience and preview deployments.",
+          "comparison": "Better integrated with Next.js than Cloudflare Pages, but potentially more expensive at scale. More advanced preview features than Netlify.",
+          "tutorial": "To deploy: (1) Connect to GitHub; (2) Import project; (3) Configure framework presets; (4) Deploy and set up domains.",
+          "free_alternatives": "Netlify (similar free tier), Cloudflare Pages"
+        },
+        {
+          "name": "GitHub Pages",
+          "url": "https://pages.github.com/",
+          "description": "Hosting service that takes files straight from a GitHub repository",
+          "evaluation": "Simple and reliable for static content, directly integrated with GitHub repositories. Limited to front-end only.",
+          "comparison": "Much simpler than Vercel or Cloudflare Pages, but lacks features like serverless functions, build configurations, and advanced routing.",
+          "tutorial": "To set up: (1) Create repository with appropriate name; (2) Enable GitHub Pages in settings; (3) Choose branch to deploy; (4) Optionally configure custom domain.",
+          "free_alternatives": "GitLab Pages"
+        }
+      ]
+    },
+    {
+      "name": "Domain Registration & Management",
+      "description": "Services for registering and managing domain names",
+      "tools": [
+        {
+          "name": "Spaceship.com",
+          "url": "https://www.spaceship.com/",
+          "description": "Domain registrar mentioned in the training manual for purchasing domains",
+          "evaluation": "Offers simple domain management and supports direct Cloudflare integration. Accepts Alipay for convenient payment.",
+          "comparison": "Less known than Namecheap or GoDaddy, but often has competitive pricing, especially for first-year registrations.",
+          "tutorial": "To register: (1) Search for available domain; (2) Select and add to cart; (3) Complete checkout; (4) Configure nameservers if needed.",
+          "free_alternatives": "No free alternatives for domain registration, but Freenom offers some free TLDs with limitations"
+        },
+        {
+          "name": "Cloudflare",
+          "url": "https://www.cloudflare.com/",
+          "description": "Provides DNS management, CDN, and security services for domains",
+          "evaluation": "Excellent security features and performance optimization. Domains registered through Cloudflare are at wholesale prices with no markup.",
+          "comparison": "Better performance and security features than most domain registrars. More technical but more powerful than typical registrar DNS management.",
+          "tutorial": "To set up: (1) Create account; (2) Add site; (3) Update nameservers at registrar; (4) Configure DNS and security settings.",
+          "free_alternatives": "No completely free alternatives for domain management at this level"
+        },
+        {
+          "name": "Porkbun",
+          "url": "https://porkbun.com/",
+          "description": "Domain registrar mentioned in the training manual",
+          "evaluation": "Known for competitive pricing, especially on newer TLDs. Simple interface and good customer support.",
+          "comparison": "Often cheaper than GoDaddy or Namecheap, especially for renewals. Less feature-rich than Cloudflare but simpler to use.",
+          "tutorial": "To register: (1) Search domain availability; (2) Add to cart; (3) Create account and checkout; (4) Configure DNS or export to other services.",
+          "free_alternatives": "No free alternatives for domain registration"
+        },
+        {
+          "name": "Namecheap",
+          "url": "https://www.namecheap.com/",
+          "description": "Popular domain registrar mentioned in the training manual",
+          "evaluation": "Reliable service with good pricing and privacy protection included for many domains. Good support for developers.",
+          "comparison": "Generally better prices than GoDaddy, especially for renewals. More user-friendly than some technical registrars but not as developer-focused as Cloudflare.",
+          "tutorial": "To register: (1) Search for domain; (2) Add to cart; (3) Configure extras like WhoisGuard; (4) Checkout and manage DNS settings.",
+          "free_alternatives": "No free alternatives for domain registration"
+        }
+      ]
+    },
+    {
+      "name": "SEO & Traffic Analysis",
+      "description": "Tools for optimizing websites for search engines and analyzing traffic",
+      "tools": [
+        {
+          "name": "Google Analytics",
+          "url": "https://analytics.google.com/",
+          "description": "Comprehensive web analytics service offered by Google",
+          "evaluation": "Industry standard for tracking website traffic with extensive features for analyzing user behavior, traffic sources, and conversions.",
+          "comparison": "More comprehensive than Cloudflare Analytics or Simple Analytics, but has a steeper learning curve. More privacy concerns than privacy-focused alternatives.",
+          "tutorial": "To set up: (1) Create Google Analytics account; (2) Add property for your website; (3) Get tracking code; (4) Add tracking code to your website header.",
+          "free_alternatives": "Cloudflare Web Analytics, Plausible.io (limited free tier)"
+        },
+        {
+          "name": "Google Search Console",
+          "url": "https://search.google.com/search-console/",
+          "description": "Tool for monitoring and optimizing a website's presence in Google Search results",
+          "evaluation": "Essential for understanding how Google views your site and identifying SEO issues. Provides valuable keyword and performance data.",
+          "comparison": "More focused on search performance than Google Analytics. No real alternative for Google-specific search data.",
+          "tutorial": "To set up: (1) Add property (URL or domain); (2) Verify ownership (via DNS, HTML file, or Google Analytics); (3) Submit sitemap; (4) Monitor performance and issues.",
+          "free_alternatives": "Bing Webmaster Tools (for Microsoft search engine data only)"
+        },
+        {
+          "name": "AITDK",
+          "url": "https://aitdk.com/",
+          "description": "Extension that provides SEO metrics and insights directly in search results",
+          "evaluation": "Excellent for quick competitive analysis and identifying SEO opportunities without leaving search results pages.",
+          "comparison": "More convenient than traditional SEO tools for quick research, but less comprehensive than dedicated platforms like Ahrefs or SEMrush.",
+          "tutorial": "After installation: (1) Perform normal Google searches; (2) View SEO metrics directly in results; (3) Click on metrics for detailed analysis.",
+          "free_alternatives": "Detailed SEO Extension (more limited data)"
+        },
+        {
+          "name": "Ahrefs",
+          "url": "https://ahrefs.com/",
+          "description": "Comprehensive SEO toolset for backlink analysis, keyword research, and competitor analysis",
+          "evaluation": "One of the most powerful SEO tools available, with excellent backlink data and comprehensive site auditing capabilities.",
+          "comparison": "More comprehensive backlink data than SEMrush, but slightly more expensive. More technical than simpler tools like Ubersuggest.",
+          "tutorial": "To use: (1) Enter domain in Site Explorer for backlink analysis; (2) Use Keywords Explorer for keyword research; (3) Set up Site Audit to identify issues.",
+          "free_alternatives": "Ahrefs Webmaster Tools (limited), Ubersuggest (limited free tier)"
+        }
+      ]
+    },
+    {
+      "name": "Game Development & Resources",
+      "description": "Tools and platforms for creating and integrating games into websites",
+      "tools": [
+        {
+          "name": "HTML5 Game Distribution",
+          "url": "https://html5gamedistribution.com/",
+          "description": "Platform for finding and integrating HTML5 games into websites",
+          "evaluation": "Good source for ready-made HTML5 games that can be embedded into websites. Various revenue-sharing models available.",
+          "comparison": "More commercially focused than itch.io, with emphasis on distribution and monetization rather than independent game development.",
+          "tutorial": "To use: (1) Browse game catalog; (2) Select a game; (3) Get embedding code; (4) Add to your website with appropriate iframe settings.",
+          "free_alternatives": "itch.io (free HTML5 games section)"
+        },
+        {
+          "name": "CrazyGames",
+          "url": "https://www.crazygames.com/",
+          "description": "Platform for HTML5 games with embed options for developers",
+          "evaluation": "Large selection of high-quality HTML5 games with easy integration through iframe embedding.",
+          "comparison": "Better game quality than many free HTML5 game sites. More user-friendly than some developer-focused platforms.",
+          "tutorial": "To embed games: (1) Find a game you want; (2) Look for embed option; (3) Copy iframe code; (4) Paste into your website.",
+          "free_alternatives": "GameDistribution.com (with ads)"
+        },
+        {
+          "name": "itch.io",
+          "url": "https://itch.io/",
+          "description": "Marketplace for independent digital creators with many free and open-source games",
+          "evaluation": "Excellent for finding unique, creative games from independent developers. Many free HTML5 games available.",
+          "comparison": "More indie-focused than commercial platforms like CrazyGames or HTML5 Game Distribution. Better for unique games rather than mainstream titles.",
+          "tutorial": "To find HTML5 games: (1) Go to Games section; (2) Filter by HTML5 or Web; (3) Check licensing terms; (4) Either link to the game or embed if allowed.",
+          "free_alternatives": "No major alternatives with the same indie focus and variety"
+        }
+      ]
+    },
+    {
+      "name": "AI Image Generation",
+      "description": "Tools for creating images using AI",
+      "tools": [
+        {
+          "name": "Midjourney",
+          "url": "https://www.midjourney.com/",
+          "description": "AI image generation tool known for artistic and high-quality outputs",
+          "evaluation": "Produces remarkably creative and artistic images. Excellent for conceptual art, illustrations, and unique visual content.",
+          "comparison": "Better artistic quality than DALL-E 2 or Stable Diffusion in many cases, but requires Discord and has less direct control over outputs.",
+          "tutorial": "To use: (1) Join Discord server; (2) Go to a newbie channel; (3) Type /imagine followed by your prompt; (4) Choose variations or upscale results.",
+          "free_alternatives": "Stable Diffusion (self-hosted), Bing Image Creator (limited)"
+        },
+        {
+          "name": "DALL-E",
+          "url": "https://openai.com/dall-e/",
+          "description": "OpenAI's image generation model that creates images from text descriptions",
+          "evaluation": "Good balance between control and quality, with strong capabilities for realistic images and following detailed instructions.",
+          "comparison": "More precise control than Midjourney but sometimes less artistic. Better integration with OpenAI ecosystem than other tools.",
+          "tutorial": "Through API: (1) Get API key; (2) Set up API request with prompt; (3) Process and save returned image; (4) Implement in front-end with preview.",
+          "free_alternatives": "Bing Image Creator (powered by DALL-E but with limitations)"
+        },
+        {
+          "name": "Flux Shell",
+          "url": "https://www.fluxshell.ai/",
+          "description": "AI image generation platform mentioned in training manual",
+          "evaluation": "Newer platform with innovative image generation capabilities. Good for technical and product illustrations.",
+          "comparison": "Less known than DALL-E or Midjourney, but potentially valuable for specific use cases like technical illustrations.",
+          "tutorial": "To use: (1) Create account; (2) Enter detailed prompt; (3) Adjust settings for style and detail; (4) Generate and download images.",
+          "free_alternatives": "Leonardo.ai (limited free tier)"
+        },
+        {
+          "name": "Ideogram",
+          "url": "https://ideogram.ai/",
+          "description": "AI image generation tool with strong capabilities for text rendering in images",
+          "evaluation": "Exceptional at generating images with text that is actually readable - a challenge for many other AI image generators.",
+          "comparison": "Better than Midjourney or DALL-E specifically for images containing text. Less artistic control than some specialized tools.",
+          "tutorial": "To use: (1) Sign up; (2) Craft prompt with clear text requirements; (3) Generate image; (4) Refine with feedback if needed.",
+          "free_alternatives": "Stable Diffusion with control nets (requires technical setup)"
+        }
+      ]
+    },
+    {
+      "name": "Keyword Research & Market Analysis",
+      "description": "Tools for finding and analyzing keywords and market opportunities",
+      "tools": [
+        {
+          "name": "Google Trends",
+          "url": "https://trends.google.com/",
+          "description": "Tool for examining search trends and comparing search term popularity over time",
+          "evaluation": "Excellent for identifying trending topics and seasonal patterns in search behavior. Provides relative popularity rather than absolute search volumes.",
+          "comparison": "Less detailed than paid keyword tools like Ahrefs or SEMrush, but better for trend analysis and completely free.",
+          "tutorial": "To use: (1) Enter search term(s); (2) Set region and time period; (3) Analyze trend graph; (4) Compare with related queries section.",
+          "free_alternatives": "Completely free tool"
+        },
+        {
+          "name": "Currentdomains.com",
+          "url": "https://currentdomains.com/",
+          "description": "Tool for checking domain availability based on current trends",
+          "evaluation": "Useful for finding available domains related to trending topics and keywords.",
+          "comparison": "More trend-focused than standard domain checkers like GoDaddy or Namecheap's search tools.",
+          "tutorial": "To use: (1) Browse trending domain categories; (2) Enter keywords or browse suggestions; (3) Check availability; (4) Register through linked registrars.",
+          "free_alternatives": "InstantDomainSearch.com"
+        },
+        {
+          "name": "InstantDomainSearch.com",
+          "url": "https://instantdomainsearch.com/",
+          "description": "Fast domain name search tool for checking availability in real-time",
+          "evaluation": "Very fast domain availability checking with instant results as you type. Good suggestions for alternatives.",
+          "comparison": "Faster than traditional registrar search tools. More user-friendly than many alternatives but less feature-rich than some domain tools.",
+          "tutorial": "To use: (1) Type domain ideas to instantly see availability; (2) Browse suggestions; (3) Click on available domains; (4) Register through partner registrars.",
+          "free_alternatives": "Completely free tool"
+        }
+      ]
+    },
+    {
+      "name": "Monetization & Advertising",
+      "description": "Tools and platforms for monetizing websites",
+      "tools": [
+        {
+          "name": "Google AdSense",
+          "url": "https://www.google.com/adsense/",
+          "description": "Google's advertising program that allows website owners to earn money by displaying ads",
+          "evaluation": "The most widely used advertising platform for websites. Easy to implement but requires significant traffic for meaningful revenue.",
+          "comparison": "Lower payouts than direct advertising or affiliate marketing, but much simpler to set up and maintain. Better for general websites than niche ad networks.",
+          "tutorial": "To set up: (1) Create AdSense account; (2) Add site and get approval; (3) Create ad units; (4) Place ad code on your website.",
+          "free_alternatives": "No direct free alternatives for monetization"
+        },
+        {
+          "name": "ko-fi",
+          "url": "https://ko-fi.com/",
+          "description": "Platform for receiving tips and donations from website visitors",
+          "evaluation": "User-friendly donation platform with low fees and simple integration. Good for creators with engaged audiences.",
+          "comparison": "More casual and less subscription-focused than Patreon. Lower fees than PayPal donation buttons.",
+          "tutorial": "To implement: (1) Create ko-fi page; (2) Customize profile and donation options; (3) Get button code; (4) Add to your website.",
+          "free_alternatives": "Buy Me A Coffee (similar model)"
+        },
+        {
+          "name": "Buy Me A Coffee",
+          "url": "https://www.buymeacoffee.com/",
+          "description": "Simple platform for creators to receive support from fans",
+          "evaluation": "Very easy to set up and use with a friendly, approachable interface. Good balance of features and simplicity.",
+          "comparison": "Similar to Ko-fi but with slightly different fee structure and features. Less formal than Patreon's subscription model.",
+          "tutorial": "To implement: (1) Create account; (2) Set up profile and support options; (3) Get support button; (4) Embed on website.",
+          "free_alternatives": "Ko-fi (similar model)"
+        }
+      ]
+    },
+    {
+      "name": "Navigation & Directory Site Tools",
+      "description": "Tools and resources for creating navigation and directory websites",
+      "tools": [
+        {
+          "name": "FRE123 Navigation Platform",
+          "url": "https://github.com/fre123-com/fre123-nav/",
+          "description": "Open-source platform for building navigation websites",
+          "evaluation": "Well-structured option for creating resource directories with modern design and good categorization features.",
+          "comparison": "More developer-focused than commercial solutions like WordPress directory themes. Better for technical resource collections.",
+          "tutorial": "To implement: (1) Fork GitHub repository; (2) Follow setup instructions; (3) Customize categories and resources; (4) Deploy to hosting platform.",
+          "free_alternatives": "WebStackPage.github.io (alternative open-source navigation template)"
+        },
+        {
+          "name": "WebStackPage",
+          "url": "https://github.com/WebStackPage/WebStackPage.github.io",
+          "description": "Open-source, responsive resource navigation site template",
+          "evaluation": "Clean design optimized for resource directories with good mobile responsiveness and search functionality.",
+          "comparison": "Simpler than FRE123 but also lighter weight. Good balance of features and simplicity.",
+          "tutorial": "To implement: (1) Clone repository; (2) Edit configuration files for categories; (3) Add resources in YAML format; (4) Deploy to GitHub Pages or other hosting.",
+          "free_alternatives": "LinkTree (for simpler needs)"
+        },
+        {
+          "name": "OSS Gallery",
+          "url": "https://github.com/dubinc/oss-gallery",
+          "description": "Platform for showcasing open-source projects in a directory format",
+          "evaluation": "Well-designed for technical resource directories with good filtering and categorization options.",
+          "comparison": "More focused on open-source projects than general resource directories. Better technical integration than some alternatives.",
+          "tutorial": "To implement: (1) Fork repository; (2) Follow setup guide; (3) Add your resources following the data structure; (4) Deploy to preferred hosting.",
+          "free_alternatives": "GitHub Pages with custom directory template"
+        }
+      ]
+    },
+    {
+      "name": "Web Templates & Frameworks",
+      "description": "Ready-made templates and frameworks for website development",
+      "tools": [
+        {
+          "name": "Next.js Boilerplate",
+          "url": "https://github.com/ixartz/Next-js-Boilerplate",
+          "description": "Starter template for Next.js with TypeScript, ESLint, and more",
+          "evaluation": "Excellent starting point for modern React applications with Next.js, including best practices and necessary configurations.",
+          "comparison": "More comprehensive than basic Create Next App templates. Better structured than many other boilerplates.",
+          "tutorial": "To use: (1) Clone repository; (2) Install dependencies; (3) Run development server; (4) Customize components and pages.",
+          "free_alternatives": "Create Next App (simpler version)"
+        },
+        {
+          "name": "SaaS Boilerplate",
+          "url": "https://github.com/ixartz/SaaS-Boilerplate",
+          "description": "Complete starter kit for building SaaS applications with Next.js",
+          "evaluation": "Comprehensive solution including authentication, payment integration, and dashboard components.",
+          "comparison": "More feature-complete than basic Next.js templates. Includes Stripe integration unlike many free alternatives.",
+          "tutorial": "To implement: (1) Clone repository; (2) Configure environment variables for services; (3) Set up database; (4) Customize UI and business logic.",
+          "free_alternatives": "Next.js Boilerplate (without SaaS-specific features)"
+        },
+        {
+          "name": "Astro Boilerplate",
+          "url": "https://github.com/ixartz/Astro-boilerplate",
+          "description": "Template for building static sites with Astro framework",
+          "evaluation": "Excellent for performance-focused static sites with partial hydration capabilities. Good balance of features and simplicity.",
+          "comparison": "Faster performance than React-based frameworks for content-heavy sites. Better developer experience than plain static site generators.",
+          "tutorial": "To use: (1) Clone or download the template; (2) Install dependencies; (3) Run development server; (4) Customize content and components.",
+          "free_alternatives": "Astro's basic starter templates"
+        },
+        {
+          "name": "Landing Page Boilerplate",
+          "url": "https://github.com/weijunext/landing-page-boilerplate",
+          "description": "Versatile template for marketing landing pages",
+          "evaluation": "Well-designed for conversion-focused landing pages with good component selection and optimization.",
+          "comparison": "More focused on conversion than general-purpose templates. Lighter weight than full website frameworks.",
+          "tutorial": "To implement: (1) Clone repository; (2) Install dependencies; (3) Customize content and styling; (4) Deploy to hosting platform.",
+          "free_alternatives": "Next.js Landing Page Template (by ixartz)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block category_specific_content %}
+<!-- 功能特性 -->
+<div class="tool-section">
+    <h2 class="tool-section-title">Features</h2>
+    <ul>
+        {% for feature in tool.features %}
+        <li>{{feature}}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- 图像展示 -->
+{% if tool.examples %}
+<div class="tool-section">
+    <h2 class="tool-section-title">Example Outputs</h2>
+    <div class="image-gallery">
+        {% for example in tool.examples %}
+        <div class="image-example">
+            <div class="example-pair">
+                <div class="example-input">
+                    <h4>Prompt</h4>
+                    <p>{{example.prompt}}</p>
+                    {% if example.input_image %}
+                    <img src="{{example.input_image}}" alt="Input image">
+                    {% endif %}
+                </div>
+                <div class="example-output">
+                    <h4>Result</h4>
+                    <img src="{{example.output_image}}" alt="Generated image">
+                </div>
+            </div>
+            {% if example.settings %}
+            <div class="example-settings">
+                <h4>Settings Used</h4>
+                <ul>
+                    {% for key, value in example.settings.items() %}
+                    <li><strong>{{key}}:</strong> {{value}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- 使用教程 -->
+<div class="tool-section">
+    <h2 class="tool-section-title">How to Use</h2>
+    <div class="tutorial-content">
+        {% if tool.tutorial %}
+        <div class="tutorial-overview">
+            <h3>Overview</h3>
+            <p>{{tool.tutorial}}</p>
+        </div>
+        {% endif %}
+        
+        {% if tool.tutorial_steps %}
+        <div class="tutorial-steps">
+            <h3>Step by Step Guide</h3>
+            <div class="steps-container">
+                {% for step in tool.tutorial_steps %}
+                <div class="step-item">
+                    <div class="step-number">{{loop.index}}</div>
+                    <div class="step-content">{{step}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- 提示词指南 -->
+{% if tool.prompt_guide %}
+<div class="tool-section">
+    <h2 class="tool-section-title">Prompt Guide</h2>
+    <div class="prompt-tips">
+        <h3>Effective Prompting Tips</h3>
+        <ul>
+            {% for tip in tool.prompt_guide.tips %}
+            <li>{{tip}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% if tool.prompt_guide.examples %}
+    <div class="prompt-examples">
+        <h3>Example Prompts</h3>
+        <ul>
+            {% for example in tool.prompt_guide.examples %}
+            <li>
+                <strong>{{example.title}}:</strong>
+                <code>{{example.prompt}}</code>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- 风格设置 -->
+{% if tool.style_options %}
+<div class="tool-section">
+    <h2 class="tool-section-title">Style Options</h2>
+    <div class="style-grid">
+        {% for style in tool.style_options %}
+        <div class="style-card">
+            <img src="{{style.example_image}}" alt="{{style.name}} style example">
+            <h4>{{style.name}}</h4>
+            <p>{{style.description}}</p>
+            {% if style.parameters %}
+            <div class="style-params">
+                <h5>Parameters:</h5>
+                <ul>
+                    {% for param in style.parameters %}
+                    <li>{{param}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block additional_info %}
+{% if tool.supported_formats %}
+<p><strong>Supported Formats:</strong> {{tool.supported_formats|join(', ')}}</p>
+{% endif %}
+{% if tool.max_resolution %}
+<p><strong>Max Resolution:</strong> {{tool.max_resolution}}</p>
+{% endif %}
+{% if tool.generation_speed %}
+<p><strong>Generation Speed:</strong> {{tool.generation_speed}}</p>
+{% endif %}
+{% if tool.pricing %}
+<p><strong>Pricing:</strong> {{tool.pricing}}</p>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="/assets/css/image-tool.css">
+<script src="/assets/js/image-gallery.js"></script>
+{% endblock %} 
